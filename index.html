@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spatzilla</title>
+    <style>
+      :root{
+        --bg:#0e2336;          /* dunkelblau */
+        --bg-2:#122c45;        /* leicht heller für Hover */
+        --text:#ffffff;        /* weiß */
+        --accent:#9fe4ff;      /* sanfter Akzent */
+      }
+      *{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--text)}
+      a{color:inherit;text-decoration:none}
+
+      /* Header */
+      header.site-header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,var(--bg),rgba(14,35,54,.98));backdrop-filter:saturate(120%) blur(4px);}
+      .container{max-width:1100px;margin-inline:auto;padding:10px 20px;display:flex;align-items:center;gap:18px}
+
+      /* Brand */
+      .brand{display:flex;align-items:center;gap:12px;min-width:0}
+      .brand img{height:40px;width:auto;display:block;filter:drop-shadow(0 0 0 rgba(0,0,0,0.0));}
+      .brand .title{font-weight:700;letter-spacing:.4px;white-space:nowrap}
+
+      /* Nav */
+      nav{margin-left:auto}
+      ul.nav{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+      .nav a{padding:8px 10px;border-radius:10px;opacity:.92}
+      .nav a:hover,.nav a:focus{background:var(--bg-2);opacity:1}
+
+      /* CTA */
+      .cta{margin-left:8px;padding:10px 14px;border-radius:12px;background:var(--text);color:var(--bg);font-weight:600}
+      .cta:hover{background:#e8eef3}
+
+      /* Mobile menu button (CSS-only) */
+      .burger{display:none;cursor:pointer;user-select:none}
+      .burger span{display:block;width:24px;height:2px;background:var(--text);margin:6px 0;transition:.2s}
+      #menu-toggle{display:none}
+
+      /* Responsive */
+      @media (max-width:800px){
+        .brand .title{font-size:16px}
+        nav{position:fixed;inset:60px 0 auto 0;background:var(--bg);border-top:1px solid rgba(255,255,255,.08);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.2s}
+        ul.nav{flex-direction:column;padding:12px 20px}
+        .cta{margin:8px 20px 16px}
+        .burger{display:block;margin-left:auto}
+        #menu-toggle:checked + label + nav{transform:translateY(0);opacity:1;pointer-events:auto}
+        #menu-toggle:checked + label .line1{transform:translateY(8px) rotate(45deg)}
+        #menu-toggle:checked + label .line2{opacity:0}
+        #menu-toggle:checked + label .line3{transform:translateY(-8px) rotate(-45deg)}
+      }
+
+      /* Demo main section so the header has context */
+      main{max-width:1100px;margin:24px auto;padding:0 20px 80px}
+      .hero{display:grid;gap:14px}
+      .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0}
+      .hero p{max-width:62ch;opacity:.9}
+      .cards{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+      .card{background:var(--bg-2);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:16px}
+    </style>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <!-- 1) LOGO: ersetze den src-Pfad durch deinen Bildpfad.  
+             Tipp: Lege die Datei z.B. unter /assets/spatzilla-logo.png ab. -->
+        <a class="brand" href="#" aria-label="Spatzilla Startseite">
+          <img src="assets/spatzilla-logo.png" alt="Spatzilla Logo – weißes Liniensignet" />
+          <div class="title">SPATZILLA</div>
+        </a>
+
+        <!-- Mobile Burger -->
+        <input id="menu-toggle" type="checkbox" aria-hidden="true" />
+        <label class="burger" for="menu-toggle" aria-label="Menü öffnen/schließen">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </label>
+
+        <!-- Navigation -->
+        <nav role="navigation" aria-label="Hauptnavigation">
+          <ul class="nav">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#preise">Preise</a></li>
+            <li><a href="#about">Über uns</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <a class="cta" href="#loslegen">Loslegen</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Spatzilla: Klein, frech, riesige Wirkung.</h1>
+        <p>Eine kurze Tagline als Platzhalter. Hier erklärst du in 1–2 Sätzen, was Spatzilla einzigartig macht. Der Header oben ist bereits produktionsreif und mobilfähig.</p>
+        <div class="cards">
+          <div class="card">Platzhalter-Card A</div>
+          <div class="card">Platzhalter-Card B</div>
+          <div class="card">Platzhalter-Card C</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

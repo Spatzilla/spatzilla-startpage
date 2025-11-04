@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720">
+  <defs>
+    <style>
+      .line{fill:none;stroke:#0e2336;stroke-width:18;stroke-linecap:round;stroke-linejoin:round}
+      .fill{fill:#0e2336}
+    </style>
+  </defs>
+  <!-- Spatzilla figure -->
+  <path class="line" d="M470 534c-68 34-162 38-226-4-94-61-94-175-23-243 76-73 212-77 286-3 51 51 53 129 9 184"/>
+  <path class="line" d="M246 432c16 46 62 91 126 99"/>
+  <circle class="fill" cx="416" cy="292" r="12"/>
+  <path class="line" d="M452 306l54-18-54-18"/>
+  <path class="line" d="M420 468c-34-16-64-45-80-78"/>
+  <path class="line" d="M415 230l28-40 30 46 32-44 32 46 34-44 34 50"/>
+  <path class="line" d="M584 436l64 70"/>
+  <path class="line" d="M566 456l58 62"/>
+  <path class="line" d="M300 554l-48 26"/>
+  <path class="line" d="M330 558l-10 36"/>
+</svg>
